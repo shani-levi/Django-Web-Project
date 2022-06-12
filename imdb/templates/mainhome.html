@@ -1,0 +1,25 @@
+{% extends 'index.html'%}
+{% block content %}
+{% load static %}
+<head>
+    <title>MainHome</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <link rel="stylesheet" href="{% static 'bootstrap.min.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/css/swiper.min.css">
+    <link rel="stylesheet" href="{% static 'Simple-Slider.css' %}">
+    <link rel="stylesheet" href="{% static 'styles6.css' %}">
+</head>
+<body>
+ <div class="carousel slide" data-ride="carousel" id="carousel-1" style="margin-bottom:0px;">
+        <div class="carousel-inner" style="height:600px;">
+            <div class="carousel-item active"><img class="w-100 d-block" src="{% static 'welcome.jpg' %}" alt="Slide Image"></div>
+        </div>
+</div>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.3.1/js/swiper.jquery.min.js"></script>
+    <script src="assets/js/Simple-Slider.js"></script>
+
+</body>
+{% endblock %}

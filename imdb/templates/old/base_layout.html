@@ -1,0 +1,25 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static 'styles1.css' %}">
+<header>
+    <div class="container">
+      <h1 class="logo"></h1>
+      <nav>
+        <ul>
+          <li><img src="{% static 'unnamed.png' %}" height="22" ></li>
+          <li></li>
+          <li><a href="{% url 'list'%}">Movies</a></li>
+          <li><a href="{% url 'about'%}">About</a></li>
+          <li><a href="{% url 'contact'%}">Contact</a></li>
+          <li><a href="{% url 'SignIn'%}">Sign In</a></li>
+          <li><a href="{% url 'SignUp'%}">Sign Up</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+    {% block content %}
+    {% endblock %}
+</body>
+</html>

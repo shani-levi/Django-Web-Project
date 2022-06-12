@@ -1,0 +1,28 @@
+{% extends 'index.html'%}
+{% block content %}
+{% load static %}
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Movies</title>
+    <link rel="stylesheet" href="{% static 'bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'styles2.css' %}">
+</head>
+
+<body>
+<div class="movies" style="background:black;">
+    <div class="card-group text-center d-inline-flex" style="padding: 30px;margin-left:20px;">
+        {%for movie in movies%}
+            <div class="movie">
+                <a href="{% url 'detail' slug=movie.slug %}">
+                    <div class="card flex-wrap-reverse" style="margin-right: 20px;margin-top:20px;border-radius: 0px;border-width: 6px;border-color: var(--bs-light);margin"><img class="card-img-top w-100 d-block" src="{{movie.picture.url}}" style="height: 200px;>
+                        <div class="card-body m-auto"></div>
+                </a>
+            </div>
+            {% endfor %}
+    </div>
+    {% endblock %}
+</div>
+<script src="{% static 'bootstrap.min.js' %}"></script>
+</body>
+

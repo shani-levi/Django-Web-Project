@@ -1,0 +1,27 @@
+{% extends 'index.html'%}
+{% block content %}
+{% load static %}
+<title>Home Page</title>
+</head>
+<body>
+<h1> </h1>
+<link rel="stylesheet" href="{%static 'stylesHp.css' %}">
+<div class="movies">
+    {%for movie in movies%}
+    <div class="movie">
+         <div class="responsive">
+            <div class="gallery">
+                <a href="{% url 'detail' slug=movie.slug %}">
+                    <img src="{{movie.picture.url}}" alt="Cinque Terre" width="400" height="200">
+                </a>
+                <a
+                    href="{% url 'detail' slug=movie.slug %}">
+                        <div class="desc">{{movie.title}}</div>
+                </a>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
+

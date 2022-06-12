@@ -1,0 +1,44 @@
+{% extends 'index.html'%}
+{% load static %}
+<head>
+    {% block content %}
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>{{movie.title}}</title>
+    <link rel="stylesheet" href="{% static 'bootstrap.min.css' %}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Actor&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Akaya+Telivigala&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alef&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alegreya+Sans&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alfa+Slab+One&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amarante&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amaranth&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anek+Latin&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anek+Odia&amp;display=swap">
+    <link rel="stylesheet" href="{% static 'styles3.css' %}">
+</head>
+<body style="background: black;color: rgb(255,255,255);">
+    <div class="container" style="background: #000000;">
+        <h1 class="my-4" style="font-size: 59px;font-family: 'Alfa Slab One', serif;">{{movie.title}}<br></h1>
+        <div class="row">
+            <div class="col-md-8"> <img class="img-fluid" src="{{movie.picture.url}}" style="margin:0px;height:350px;"width="400"> </div>
+            <div class="col-md-4" style="margin-left: -250px">
+                <h3 class="my-3" style="font-family: 'Akaya Telivigala', serif;">{{movie.genre}}</h3>
+                <h3 class="my-3" style="font-family: 'Akaya Telivigala', serif;">Cast</h3>
+                <ul class="list-unstyled">
+                    <li style="font-family: Alef, sans-serif;">Director: {{movie.director}}</li>
+                    <li style="font-family: Alef, sans-serif;">Writer: {{movie.writer}}</li>
+                    <li style="font-family: Alef, sans-serif;">Actors: {{movie.actors}}</li>
+                    <li style="font-family: Alef, sans-serif;">Year: {{movie.year}}</li>
+                    <h3 class="my-3" style="font-family: 'Akaya Telivigala', serif;">Plot</h3>
+                    <p style="font-family: Alef, sans-serif;">{{movie.plot}}</p>
+                </ul>
+            </div>
+        </div>
+        <h3 class="my-4" style="font-family: 'Anek Latin', sans-serif;">Reviews<br></h3>
+        <div class="row"></div>
+    </div>
+{% endblock %}
+    <script src="{% static 'jquery.min.js' %}"></script>
+    <script src="{% static 'bootstrap.min.js' %}"></script>
+</body>

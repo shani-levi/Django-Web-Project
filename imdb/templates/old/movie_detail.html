@@ -1,0 +1,34 @@
+{% extends 'index.html'%}
+{% block content %}
+{% load static %}
+<title>Movie Detail</title>
+</head>
+<body>
+<!-- Header -->
+<div class="header">
+  <h1>{{movie.title}}</h1>
+</div>
+ <div class="movie-detail">
+        <div class="movie">
+            <div class="row">
+                <div class="side">
+                    <h2>Genre: {{movie.genre}}</h2>
+                    <h2>Director: {{movie.director}}</h2>
+                    <h2>Writer: {{movie.writer}}</h2>
+                    <h2>Actors: {{movie.actors}}</h2>
+                    <h2>Year: {{movie.year}}</h2>
+                    <h3>Plot: {{movie.plot}}</h3>
+                    <p>7</p>
+                    <p>8</p>
+                </div>
+            <div class="main">
+                    <div class="fakeimg">
+                        <img src="{{movie.picture.url}}" height="500">
+                    </div>
+            </div>
+        </div>
+ </div>
+
+</body>
+</html>
+{% endblock %}
